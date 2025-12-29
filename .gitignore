@@ -1,0 +1,89 @@
+# ==========================================
+# Dependencies (共通)
+# ==========================================
+node_modules/
+.pnp
+.pnp.js
+
+# ==========================================
+# Expo / React Native (Frontend)
+# ==========================================
+tripal/.expo/
+tripal/dist/
+tripal/web-build/
+tripal/expo-env.d.ts
+tripal/route-generate.d.ts
+
+# Android/iOS native folders (Expo Prebuildを使用する場合)
+tripal/ios/
+tripal/android/
+
+# Native artifacts
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+.kotlin/
+
+# ==========================================
+# Node.js (Backend)
+# ==========================================
+backend/npm-debug.*
+backend/yarn-debug.*
+backend/yarn-error.*
+backend/logs/
+backend/*.log
+backend/pids/
+backend/*.pid
+backend/*.seed
+backend/*.pid.lock
+
+# ==========================================
+# Environment Variables (重要：絶対に公開しない)
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+backend/.env
+tripal/.env
+
+# ==========================================
+# Docker & Database
+# ==========================================
+# Dockerのボリュームデータ（MySQLの実データなど）を
+# ホスト側にマウントしている場合は除外する
+docker/mysql/data/
+db_data/
+.docker-compose.un~
+
+# ==========================================
+# IDE / System
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IntelliJ / WebStorm
+.idea/
+
+# ==========================================
+# Debug & Misc
+# ==========================================
+.metro-health-check*
+*.tsbuildinfo
+package-lock.json
+# yarnを使う場合は yarn.lock を除外せず管理するのが一般的です
